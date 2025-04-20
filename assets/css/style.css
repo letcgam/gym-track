@@ -1,0 +1,53 @@
+* {
+    font-family: 'Spline Sans';
+    color: #fff;
+}
+body {
+    margin: 0;
+    background: #292929;
+    background-position:top;
+}
+#home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg,#000000 0, #292929 90%) no-repeat;
+}
+.treino-btn {
+    width: 50vw;
+    font-size: 30px;
+    font-family: 'Special Gothic Expanded One';
+}
+#treino {
+    width: 100%;
+    min-height: 100vh;
+}
+#treino h1 {
+    padding: 2em;
+    background: #000;
+    width: 100%;
+    border-radius: 0 0 1em 1em;
+    margin-bottom: 24px;
+}
+.exercicio {
+    background-color: #3e3e3f;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 6px 12px;
+}
+/* .exercicio .resumido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+.exercicio .detalhado {
+    padding-top: 1em;
+    display: none;
+}
+.exercicio .nome {
+    font-size: large;
+    margin: 0;
+}
