@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bobão</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Barriecito&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
@@ -16,15 +17,25 @@
 
 <body>
     <div id="home">
-        <button class="btn btn-lg btn-dark treino-btn my-1">Push</button>
-        <button class="btn btn-lg btn-dark treino-btn my-1">Legs</button>
-        <button class="btn btn-lg btn-dark treino-btn my-1">Pull</button>
+        <h3 style="margin: 0; text-align: center;">Treino<p id="nome-treino">ABC 2</p></h3>
+        
+        <span style="width: min-content;" id="lista-btn-dia-treino"></span>
+
+        <button class="btn btn-danger rounded-circle opacity-0" id="btn-menu">
+            <input type="checkbox" id="menu_checkbox">
+            <label for="menu_checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+            </label>
+        </button>
+
     </div>
 
     <div id="treino">
         <h1>Treino</h1>
 
-        <div class="exercicio">
+        <!-- <div class="exercicio">
             <div class="resumido">
                 <p class="nome">Supino inclinado</p>
                 <small><span class="series">4</span>&times;<span class="reps">12</span></small>
@@ -106,7 +117,7 @@
                 <p>equipamento</p>
                 <p>grupo muscular</p>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 

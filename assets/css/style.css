@@ -1,3 +1,21 @@
+:root {
+    --red: #bd0000;
+    --darkred: #920000;
+    --lightred: #b70000;
+}
+.btn-danger {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+.btn-danger:hover {
+    background-color: var(--darkred);
+    border-color: var(--darkred);
+}
+.btn-danger:active {
+    background-color: var(--darkred);
+    border-color: var(--darkred);
+}
+
 * {
     font-family: 'Spline Sans';
     color: #fff;
@@ -11,10 +29,18 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em;
     background: linear-gradient(0deg,#000000 0, #292929 90%) no-repeat;
+}
+#nome-treino {
+    font-size: 40px;
+    font-family: 'Special Gothic Expanded One';
+    text-align: center;
+    line-height: 1;
+    color: var(--red);
 }
 .treino-btn {
     width: 50vw;
@@ -24,11 +50,13 @@ body {
 #treino {
     width: 100%;
     min-height: 100vh;
+    display: none;
+    padding: 0 0 4em;
 }
 #treino h1 {
     padding: 2em;
     background: #000;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 0 0 1em 1em;
     margin-bottom: 24px;
 }
@@ -47,7 +75,88 @@ body {
     padding-top: 1em;
     display: none;
 }
+.exercicio .detalhado table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.exercicio .detalhado table tr {
+    border-top: 1px solid #a1a1a1da
+}
+.exercicio .detalhado table td {
+    padding: 6px 6px 6px 0;
+    color: #c2c2c2;
+}
+.btn-ckeckbox-exercicio {
+    height: 1.5em !important;
+    width: 1.5em !important;
+    padding: 0;
+}
 .exercicio .nome {
     font-size: large;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    transition: all 0.1s ease-in-out;
+}
+.exercicio-check {
+    opacity: .4;
+    text-decoration: line-through;
+}
+
+#btn-menu {
+    height: 3em;
+    width: 3em;
+}
+
+#menu_checkbox {
+    display: none;
+}
+
+label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+label div {
+    position: relative;
+    top: 0;
+    height: 4px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+    border-radius: 2px;
+}
+
+label div:first-child {
+    transform-origin: 0;
+}
+
+label div:last-child {
+    margin-bottom: 0;
+    transform-origin: 20px;
+}
+
+label div:nth-child(2) {
+    right: 0;
+    width: 20px;
+}
+
+#menu_checkbox:checked + label div:first-child {
+    top: -2px;
+    transform: rotateZ(45deg);
+}
+
+#menu_checkbox:checked + label div:last-child {
+    top: 2px;
+    transform: rotateZ(45deg);
+}
+
+#menu_checkbox:checked + label div:nth-child(2) {
+    width: 28px;
+    top: 0;
+    right: 4px;
+    transform: rotateZ(-45deg);
 }
